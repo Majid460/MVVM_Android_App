@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter City , Id or Name to search"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:backgroundTint="@color/davsgrey"
+            android:text="By ID"
+            android:onClick="findDataById"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:text="By City"
+            android:backgroundTint="@color/darkpastelgreen"
+            android:onClick="findDataByCity"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:text="By Name"
+            android:backgroundTint="@color/darkslatgrey"
+            android:onClick="findDataByName"
+            tools:ignore="UsingOnClickInXml" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ET_three"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="22sp"
+        android:hint="Enter ID/ City or Name"
+        android:paddingStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edit_text_shape"
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Delete Enter ID "
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="Delete"
+            android:onClick="deleteById"
+            tools:ignore="UsingOnClickInXml" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <ListView
+        android:id="@+id/LV_one"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</androidx.appcompat.widget.LinearLayoutCompat>
